@@ -6,73 +6,82 @@
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
-<body>  
-<header class="shadow-sm bg-white">
-  <section class="w-[1170px] mx-auto flex justify-between items-center py-3 px-4">
+<body> 
+<header class="shadow-sm flex items-center justify-between relative z-10">
+  <div class="w-[1170px] flex justify-between mx-auto py-3.5">
     <!-- Logo -->
-    <div class="logo">
-      <a href="#">
-        <img src="./assets/image/logo.png" alt="Company Logo" class="w-[165px]">
-      </a>
+    <div class="w-[165px] md:w-[165px] h-[42px] md:h-[42px]">
+      <img src="./assets/image/logo.png" alt="Company Logo" class="w-full h-full object-cover">
     </div>
 
-    <!-- Hamburger Button -->
-    <div class="lg:hidden">
-      <button id="menu-toggle" class="focus:outline-none">
-        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Menu Items -->
-    <div id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-[36px] absolute lg:static top-[60px] left-0 w-full lg:w-auto bg-white lg:bg-transparent px-4 lg:px-0 py-4 lg:py-0 z-50 shadow-md lg:shadow-none">
-      <ul class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-9">
-        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Home</a></li>
+    <!-- Menu (Desktop) -->
+    <nav class="hidden md:flex w-auto">
+      <ul class="flex items-center gap-6 xl:gap-8">
+         <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Home</a></li>
         <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">About us</a></li>
         <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Services</a></li>
         <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Project</a></li>
         <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Blogs</a></li>
         <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Contact</a></li>
-      </ul>
-
-      <!-- Call Back Button -->
       <div class="mt-4 lg:mt-0">
         <button class="bg-[#DD3142] px-3 py-2 text-white uppercase rounded-md font-bold text-[12px] hover:bg-red-700 transition">
           Request a Call Back
         </button>
       </div>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden relative">
+      <input type="checkbox" id="menu-toggle" class="peer hidden">
+      <label for="menu-toggle" class="cursor-pointer z-20 relative">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+
+      <!-- Sliding Mobile Menu -->
+      <nav class="fixed top-[80px] right-0 w-full h-screen bg-[#ffd4d0]/90 z-10 translate-x-full peer-checked:translate-x-0 duration-300 ease-in-out">
+        <ul class="flex flex-col items-center gap-6 p-6">
+          <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Home</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">About us</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Services</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Project</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Blogs</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Contact</a></li>
+      <div class="mt-4 lg:mt-0">
+        <button class="bg-[#DD3142] px-3 py-2 text-white uppercase rounded-md font-bold text-[12px] hover:bg-red-700 transition">
+          Request a Call Back
+        </button>
+      </div>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</header>
+ <section class="max-w-[1170px] mx-auto px-4 pt-16">
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      
+      <!-- Left Side: Text Content -->
+      <div class="flex-1 text-center md:text-left">
+          <h1 class="p-0 m-0 font-Bricolage text-[32px] sm:text-[36px] md:text-[42px] lg:text-[44px] leading-tight font-extrabold mb-4 uppercase">Call us For Any <br><span class="font-medium text-[34px] sm:text-[38px] md:text-[44px] lg:text-[46px] leading-tight tracking-[1px]">Plumbing Needs</span></h1>
+      <p class="font-Bricolage text-[24px] sm:text-[28px] md:text-[32px] lg:text-[34px] font-extrabold mb-4">+1800-9938-2839</p>
+      <a href="#" class="bg-[#DD3142] text-white px-6 py-3 rounded-full text-[14px] sm:text-[16px] font-normal font-Roboto uppercase hover:bg-red-700 transition duration-200">See All Service </a>
+    </div>
+
+      <!-- Right Side:Image -->
+      <div class="flex-1">
+        <img src="./assets/image/Component 1.png" alt="Hero Image"
+          class="w-full h-auto  transition transform duration-500 ease-in-out  animate-fadeIn">
+      </div>
+
     </div>
   </section>
-</header>
 
-<section class="hero pt-[46px]">
-  <div class="w-[1170px] mx-auto px-4 flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
-    
-    <!-- Text Area -->
-    <div class="text-area flex flex-col justify-center items-start w-full lg:w-1/2 lg:pr-10">
-      <h1 class="p-0 m-0 font-Bricolage text-[32px] sm:text-[36px] md:text-[42px] lg:text-[44px] leading-tight font-extrabold mb-4 uppercase">
-        Call us For Any <br>
-        <span class="font-medium text-[34px] sm:text-[38px] md:text-[44px] lg:text-[46px] leading-tight tracking-[1px]">
-          Plumbing Needs
-        </span>
-      </h1>
-      <p class="font-Bricolage text-[24px] sm:text-[28px] md:text-[32px] lg:text-[34px] font-extrabold mb-4">
-        +1800-9938-2839
-      </p>
-      <a href="#" class="bg-[#DD3142] text-white px-6 py-3 rounded-full text-[14px] sm:text-[16px] font-normal font-Roboto uppercase hover:bg-red-700 transition duration-200">
-        See All Service
-      </a>
-    </div>
 
-    <!-- Image Area -->
-    <div class="image-area w-full lg:w-1/2 flex justify-center lg:justify-end items-end relative">
-      <img src="./assets/image/Component 1.png" alt="Hero Image" class="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[658px] max-h-[600px] object-contain">
-    </div>
 
-  </div>
-</section>
 
 <section class="bg-[#DD3142]">
     <div class="max-w-[1170px] mx-auto px-4 py-10">
@@ -121,7 +130,7 @@
 
 <section class="w-full max-w-[1170px] mx-auto my-[60px] h-auto md:h-[405px] relative overflow-hidden bg-[url('./assets/image/video.png')] bg-cover bg-center flex items-center">
 
-  <!-- Overlay-->
+  <!-- Overlay -->
   <!-- <div class="absolute inset-0 bg-white/20 md:bg-white/40 z-0"></div> -->
 
   <!-- Content box -->
@@ -144,6 +153,7 @@
 </section>
 
 
+
 <section class="bg-[#DD3142]">
   <div class="max-w-[1170px] mx-auto px-4 sm:px-3 py-6 md:py-9">
     <div class="flex flex-col lg:flex-row justify-between gap-10 md:gap-[98px] ">
@@ -156,7 +166,7 @@
 
       <!-- Card 2 - Content Card -->
       <div class="w-full lg:w-[440px] h-auto flex justify-center flex-col ">
-        <h2 class="text-3xl sm:text-4xl md:text-[42px] font-bold text-white pb-2 md:pb-2.5">
+        <h2 class="text-3xl sm:text-4xl md:text-[40px] font-bold text-white pb-2 md:pb-7">
           Our Company History
         </h2>
         <p class="text-white text-sm sm:text-[14px]/[16px] pb-6 md:pb-10 sm:font-normal">
@@ -164,7 +174,7 @@
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
           when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </p>
-        <h2 class="text-2xl sm:text-[30px] font-light text-white pb-2 md:pb-2.5">
+        <h2 class="text-2xl sm:text-[30px] font-light text-white pb-2 md:pb-6">
           Trust Our Team of Experts
         </h2>
         <p class="text-white  text-sm sm:text-[14px]/[16px] sm:font-normal">
@@ -178,9 +188,9 @@
 </section>
 
 <section class="w-full  pt-20 pb-[60px]">
-    <div class="max-w-3xl mx-auto text-center">
+    <div class="max-w-[940px] mx-auto text-center">
       <h2 class="text-[30px] font-bold text-gray-800 mb-4">Plumber Points</h2>
-      <p class="text-[16px] text-gray-600">
+      <p class="text-[16px]/[23px] text-[#6D6D6D]">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -242,11 +252,11 @@
 </section>
 
 <section class="w-full pt-10 md:pt-20 pb-10 md:pb-[60px]">
-  <div class="max-w-3xl mx-auto px-4 text-center">
+  <div class="max-w-[950px] mx-auto px-4 text-center">
     <h2 class="text-2xl sm:text-[30px] font-medium text-[#0E0E0E] mb-3 sm:mb-4 uppercase">
       Our Dedicated Team
     </h2>
-    <p class="text-xs sm:text-[13px] text-[#6D6D6D]">
+    <p class="text-[16px]/[22px] py-2  text-[#6D6D6D]">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the
       1500s, when an unknown printer took a galley of type and scrambled it to
@@ -325,12 +335,12 @@
       <h2 class="text-[24px] sm:text-[28px] md:text-[30px] font-medium text-[#EEFF06] mb-6 sm:mb-8 md:mb-10 uppercase">
         Testimonial
       </h2>
-      <p class="text-[16px]/[18px] sm:text-[18px]/[20px] md:text-[20px]/[23px] text-white font-normal pb-4 sm:pb-5">
+      <p class="text-[16px]/[18px] sm:text-[18px]/[20px] md:text-[20px]/[23px] text-white font-normal  sm:pb-5">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
       </p>
-      <h4 class="text-[16px]/[18px] sm:text-[18px]/[20px] md:text-[20px]/[23px] text-white font-bold ">
+      <h4 class="text-[16px]/[18px] mt-9 sm:text-[18px]/[20px] md:text-[20px]/[23px] text-white font-bold ">
         Johny Vino
       </h4>
     </div>
@@ -394,17 +404,6 @@
     
   </section>
 
-
-
-<!-- Toggle Menu Script -->
-<script>
-  const toggleBtn = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-
-  toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
 <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
