@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+<header class="shadow-sm flex items-center justify-between relative z-10">
+  <div class="w-[1190px] flex justify-between px-2.5 mx-auto py-3.5">
+    <!-- Logo -->
+    <div class="w-[165px] md:w-[165px] h-[42px] md:h-[42px]">
+      <img src="./assets/image/logo.png" alt="Company Logo" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Menu (Desktop) -->
+    <nav class="hidden md:flex w-auto">
+      <ul class="flex items-center gap-6 xl:gap-8">
+         <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Home</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">About us</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Services</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Project</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Blogs</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Contact</a></li>
+      <div class="mt-4 lg:mt-0">
+        <button class="bg-[#DD3142] px-3 py-2 text-white uppercase rounded-md font-bold text-[12px] hover:bg-red-700 transition">
+          Request a Call Back
+        </button>
+      </div>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden relative">
+      <input type="checkbox" id="menu-toggle" class="peer hidden">
+      <label for="menu-toggle" class="cursor-pointer z-20 relative">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+
+      <!-- Sliding Mobile Menu -->
+      <nav class="fixed top-[80px] right-0 w-full h-screen bg-[#ffd4d0]/90 z-10 translate-x-full peer-checked:translate-x-0 duration-300 ease-in-out">
+        <ul class="flex flex-col items-center gap-6 p-6">
+          <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Home</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">About us</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Services</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Project</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Blogs</a></li>
+        <li><a class="font-medium text-[14px] text-[#222222] border-b-2 border-transparent hover:border-[#DD3142] hover:font-bold transition pb-[3px]" href="#">Contact</a></li>
+      <div class="mt-4 lg:mt-0">
+        <button class="bg-[#DD3142] px-3 py-2 text-white uppercase rounded-md font-bold text-[12px] hover:bg-red-700 transition">
+          Request a Call Back
+        </button>
+      </div>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</header>
+<section class="w-full max-w-[1170px] mx-auto my-[60px] h-auto md:h-[405px] relative overflow-hidden bg-[url('./assets/image/video.png')] bg-cover bg-center flex items-center">
+
+  <!-- Overlay (optional, for readability) -->
+  <div class="absolute inset-0 bg-linear-to-r from-[#DD3142] to-[#c4c4c4]/[50%]  z-0 overflow-hidden"></div>
+
+  <!-- Content box -->
+  <div class="relative z-10 w-full md:w-[542px] bg-white/80 p-6 md:py-6 md:px-10 shadow-md flex flex-col justify-center mx-auto md:mx-0">
+    <h1 class="text-[26px] md:text-[40px] font-bold text-gray-800 leading-snug mb-4 text-center md:text-left">
+      Welcome to <br class="hidden md:block">Plumber Company
+    </h1>
+    <p class="text-[14px] md:text-[15px] text-gray-700 mb-6 text-center md:text-left leading-relaxed">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+    <div class="flex justify-center md:justify-start">
+      <a href="#" class="w-[150px] text-center px-4 py-3 bg-[#DD3142] text-white text-sm font-semibold rounded hover:bg-[#c92b3a] transition duration-300">
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="bg-black flex justify-center ">
+  <div class="w-[1180px] py-10 px-2.5">
+  <div class="flex flex-row md:justify-between items-start flex-wrap gap-4  sm:justify-center sm:flex-wrap sm:gap-3">
+   <div class="max-w-[360px] w-full ">
+    <img src="./assets/image/flogo.png" alt="">
+    <div class="icon">
+    <p class="text-[12px]/[14px] text-white font-normal pt-7 pb-4">Lore Issue is simply dummy text of the printing and typesetting industry. Lore Issue has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <ul class="flex flex-row gap-4">
+        <li><a href="#"><img src="./assets/image/Vector.png" alt=""></a></li>
+        <li><a href="#"><img src="./assets/image/Vector2.png" alt=""></a></li>
+        <li><a href="#"><img src="./assets/image/Group.png" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-[160px] w-full h-auto">
+    <ul class="flex flex-col gap-3">
+      <li><a href="#"><h4 class="text-[16px]/[19px] font-bold uppercase text-[#DD3142] pb-8">Our Services</h4></a></li>
+      <li><a href="#" class="text-white text-[12px] ">Plumber Service</a></li>
+      <li><a href="#" class="text-white text-[12px] ">Bathroom Plumbing Service</a></li>
+      <li><a href="#" class="text-white text-[12px] ">Kitchen Plumbing Service</a></li>
+      <li><a href="#" class="text-white text-[12px] ">Roof Plumbing Service</a></li>
+      <li><a href="#" class="text-white text-[12px] ">Bathroom Plumbing Service</a></li>
+      <li><a href="#" class="text-white text-[12px] ">Kitchen Plumbing Service</a></li>
+    </ul>
+  </div>
+  <div class="max-w-[160px] w-full">
+    <ul class="flex flex-col">
+      <li><h4 class="text-[16px]/[19px] font-bold uppercase text-[#DD3142] pb-10">Contact</h4></li>
+      <li><a href="#" class="text-white text-[14px]/[16px] ">1800-9938-2839</a></li>
+      <li class="pb-8"><a href="#" class="text-white text-[12px]/[14px]">support@plumberpoint.com</a></li>
+      <li class="pb-8 "><a href="#" class="text-white text-[14px]/[16px] ">A-507 Mandoli <br> <span class="text-[12px]/[14px] text-white">New Delhi, India</span></a></li>
+      <li><a href="" class="text-white text-[14px]/[16px] ">Mon-Sat 9.00-15:00 <br> <span class="text-[12px]/[14px] text-white">Sunday CLOSED</span></a></li>
+    </ul>
+
+  </div>
+  <div class="max-w-[300px] w-full">
+    <h4 class="text-[16px]/[19px] font-bold uppercase text-[#DD3142] pb-6">Recent Post</h4>
+    <div class="flex gap-3 pb-3.5">
+      <img src="./assets/image/Rectangle3.png" alt="" class="max-w-[68px] w-full h-auto">
+      <div class="content">
+        <h5 class="text-[12px]/[14px] text-white font-medium pb-1">Sewer Line Repair</h5>
+        <p class="text-[10px]/[12px] text-white font-normal">Lore Issue . Simply dummy text . The printing and typesetting industry. Lore Issue has been the industry'.</p>
+      </div>
+    </div>
+     <div class="flex gap-3 pb-3.5">
+      <img src="./assets/image/Rectangle3.png" alt="" class="max-w-[68px] w-full h-auto">
+      <div class="content">
+        <h5 class="text-[12px]/[14px] text-white font-medium pb-1">Sewer Line Repair</h5>
+        <p class="text-[10px]/[12px] text-white font-normal">Lore Issue . Simply dummy text . The printing and typesetting industry. Lore Issue has been the industry'.</p>
+      </div>
+    </div>
+     <div class="flex gap-3 pb-3.5">
+      <img src="./assets/image/Rectangle3.png" alt="" class="max-w-[68px] w-full h-auto">
+      <div class="content">
+        <h5 class="text-[12px]/[14px] text-white font-medium pb-1">Sewer Line Repair</h5>
+        <p class="text-[10px]/[12px] text-white font-normal">Lore Issue . Simply dummy text . The printing and typesetting industry. Lore Issue has been the industry'.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</footer>
+<section class="flex justify-center bg-black border-t-[1.2px] border-white">
+  <div class="max-w-[1180px] w-full px-2.5 py-3">
+    <ul class="flex justify-between sm:flex-wrap">
+    <li><a href="#" class="text-[10px]/[14px] text-[#DD3142]">©Copyright 2020 Techwero Systems.</a></li>
+    <li><a href="#" class="text-[10px]/[14px] text-[#DD3142]">Term of Services</a><a href="#" class="text-[10px]/[14px] text-[#DD3142] pl-9">Privacy & policy</a></li>
+  </ul>
+  </div>
+</section>
+
+
+    
+</body>
+</html>
