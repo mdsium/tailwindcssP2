@@ -1,0 +1,10 @@
+  /* About Section slider CSS */
+  .swiper-pagination-bullet-active{
+    background: #DD3142!important;
+  }
+  .swiper-pagination-bullet{
+    background: #e2e2e2;
+    opacity: 100%;
+    width: 6px;
+    height: 6px;
+  }
